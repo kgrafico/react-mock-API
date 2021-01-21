@@ -7,7 +7,7 @@ import EmployeesDetails from './components/details.component'
 const App = () => {
   return (
     <div className="container">
-      <div className="mt-3">
+      <div className="content-box">
         <Router>
           <EmployeesList path="employees" />
           <EmployeesDetails path="employees/:id" />

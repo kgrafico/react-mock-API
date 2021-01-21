@@ -95,11 +95,11 @@ const EmployeeList = () => {
     };
 
     return (
-        <div className="content">
+        <div className="contentList">
             <AlertBar open={isAlertOpen} onClose={handleAlertClose} alertMeta={alertMeta}/>
+            <Button className="button" variant="outlined" color="primary" onClick={openCreateDialog}>Add new</Button>
             <CountryFormDialog open={isDialogOpen} handleClose={closeDialog} handleSubmit={handleSubmit} selected={selected}/>
             <ComponentTable rows={rows} onDelete={remove} openEditModal={openEditDialog}/>
-            <Button variant="outlined" color="primary" onClick={openCreateDialog}>Add new</Button>
         </div>
     );
 };
