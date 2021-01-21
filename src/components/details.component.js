@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
-import {getEmployee} from "../services/employee-http.service";
+import { getEmployee, getAllEmployees } from '../services/employee-http.service'
 import Card from "@material-ui/core/Card";
 
 const EmployeeDetails = (props) => {
@@ -63,7 +63,9 @@ const EmployeeDetails = (props) => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography component={'span'}>
-                  <div>Name: {employee.name}</div>
+                  <div>
+                    Name: {`${employee.first_name} ${employee.last_name}`}
+                  </div>
                   <div>Capital: {employee.email}</div>
                 </Typography>
               </AccordionDetails>
