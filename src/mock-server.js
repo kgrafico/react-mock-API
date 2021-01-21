@@ -5,14 +5,14 @@ if (process.env.NODE_ENV === 'development') {
     urlPrefix: 'http://localhost:8000/',
     namespace: '',
     routes() {
-      this.get('/countries/:id', (schema, request) => {
+      this.get('/employees/:id', (schema, request) => {
         let { id } = request.params
         switch (id) {
           case '1':
             return new Response(
               404,
               { 'Content-Type': 'application/json' },
-              { error: 'Country not found' }
+              { error: 'Employee not found' }
             )
         }
       })

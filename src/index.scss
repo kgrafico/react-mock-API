@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.error {
+    color: #bf1612;
+}
+
+.error::before {
+    display: inline;
+    content: "⚠ ";
+}
+
+svg:hover {
+    fill: grey;
+}
