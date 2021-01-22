@@ -21,7 +21,6 @@ const FormDialog = (props) => {
 
 
     const onSubmit = data => {
-      debugger
       Object.assign(data, { id: rows.length + 1 })
       props.handleSubmit(data);
     };

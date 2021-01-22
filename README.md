@@ -31,5 +31,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 ### `npm run eject`
-
-### `npm run build` fails to minify

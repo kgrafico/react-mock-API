@@ -45,7 +45,6 @@ const EmployeeList = () => {
     };
 
     const closeDialog = () => {
-        debugger
         setDialogOpen(false);
         setSelected({ id: '', first_name: '', email: '' })
     };
