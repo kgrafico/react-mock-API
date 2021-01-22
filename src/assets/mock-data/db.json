@@ -39,9 +39,9 @@
   "employees": [
     {
       "id": 1,
-      "first_name": "John",
+      "first_name": "Giovanni",
       "last_name": "Doe",
-      "email": "johndoe@abc.com",
+      "email": "Giovannidoe@abc.com",
       "gender": "Male",
       "status": "Terminated",
       "journeywork": {

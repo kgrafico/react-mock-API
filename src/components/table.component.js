@@ -11,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import Paper from '@material-ui/core/Paper';
+import VisibilityIcon from '@material-ui/icons/Visibility'
 
 
 export const ComponentTable = (props) => {
@@ -25,7 +26,7 @@ export const ComponentTable = (props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {props.rows.map((row) => (
+            { props.rows.map((row) => (
               <TableRow key={row.id}>
                 <TableCell component="th" scope="row">
                   <Link to={`/employees/${row.id}`} >{`${row.first_name} ${row.last_name}`}</Link>
@@ -34,6 +35,7 @@ export const ComponentTable = (props) => {
                 <TableCell>
                   <EditIcon onClick={() => props.openEditModal(row)} />
                   <DeleteIcon onClick={() => props.onDelete(row)} />
+                  <Link to={`/employees/${row.id}`} ><VisibilityIcon/></Link>
                 </TableCell>
               </TableRow>
             ))}

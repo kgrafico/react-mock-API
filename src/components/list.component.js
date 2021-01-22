@@ -96,6 +96,7 @@ const EmployeeList = () => {
 
     return (
         <div className="contentList">
+            <h2>Employees of Fast food company</h2>
             <AlertBar open={isAlertOpen} onClose={handleAlertClose} alertMeta={alertMeta}/>
             <Button className="button" variant="outlined" color="primary" onClick={openCreateDialog}>Add new</Button>
             <CountryFormDialog open={isDialogOpen} handleClose={closeDialog} handleSubmit={handleSubmit} selected={selected}/>

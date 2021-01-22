@@ -1,10 +1,9 @@
-//React imports
 import React from 'react';
-//Lodash imports
+
 import _ from "lodash/fp";
-//Form imports
+
 import {useForm} from "react-hook-form";
-//Material UI imports
+
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -82,12 +81,8 @@ const CountryFormDialog = (props) => {
             {_.get('email.type', errors) === 'required' && (
               <p>This field is required</p>
             )}
-            <Button onClick={props.handleClose} color="primary">
-              Cancel
-            </Button>
-            <Button type="submit" color="primary">
-              Submit
-            </Button>
+            <Button onClick={props.handleClose} color="primary">Cancel</Button>
+            <Button type="submit" color="primary">Submit</Button>
           </form>
         </DialogContent>
       </Dialog>
