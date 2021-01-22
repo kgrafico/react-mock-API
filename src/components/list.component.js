@@ -16,7 +16,7 @@ const EmployeeList = () => {
     const [isEmployeeListManipulated, setEmployeeListManipulated] = useState(false);
     const [isDialogOpen, setDialogOpen] = useState(false);
     const [isAlertOpen, setAlertOpen] = useState(false);
-    const [selected, setSelected] = useState({id: '', name: '', capital: ''});
+    const [selected, setSelected] = useState({ id: '', first_name: '', last_name: '', email: '' });
 
     useEffect(() => {
         getAllEmployees().then(res => setRows(res.data));
@@ -29,7 +29,7 @@ const EmployeeList = () => {
         setEmployeeListManipulated(false);
     }, [isEmployeeListManipulated]);
 
-    const add = (data) => {
+    const add = data => {
         createEmployee(data)
             .then(() => {
                 showAlert("success", "Create success");
@@ -46,7 +46,7 @@ const EmployeeList = () => {
 
     const closeDialog = () => {
         setDialogOpen(false);
-        setSelected({ id: '', first_name: '', email: '' })
+        setSelected({ id: '', first_name: '', last_name: '', email: '' })
     };
 
     const edit = data => {
@@ -59,7 +59,7 @@ const EmployeeList = () => {
             .catch(() => showAlert("error", "Update failed"));
     };
 
-    const remove = (row) => {
+    const remove = row => {
         removeEmployee(row.id)
             .then(() => showAlert("success", "Delete success"))
             .catch(() => showAlert("error", "Delete failed"));
@@ -69,16 +69,16 @@ const EmployeeList = () => {
         openFormDialog({ id: '', first_name: '', last_name: '', email: '' })
     };
 
-    const openEditDialog = (row) => {
+    const openEditDialog = row => {
         openFormDialog(row);
     };
 
-    const openFormDialog = (row) => {
+    const openFormDialog = row => {
         setDialogOpen(true);
         setSelected(row);
     };
 
-    const handleSubmit = (employee) => {
+    const handleSubmit = employee => {
         if (selected.id) {
             edit(employee);
         } else {
