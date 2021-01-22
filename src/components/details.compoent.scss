@@ -14,8 +14,12 @@
         .employee-information {
             display: flex;
             justify-content: space-around;
-            .journeyworkList {
-                .journeyworkDetail {}
+        }
+        .journeyworkList{
+            .journeyworkBox {
+                .journeyworkDetail {
+                    padding: 5px 0;
+                }
             }
         }
         .errorMessage {
