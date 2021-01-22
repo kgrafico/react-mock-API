@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 
 import _ from "lodash/fp";
 
@@ -9,13 +9,23 @@ import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { getAllEmployees } from '../services/employee-http.service'
 
 const FormDialog = (props) => {
     const {register, handleSubmit, errors} = useForm();
+    const [rows, setRows] = useState([])
+
+    useEffect(() => {
+      getAllEmployees().then((res) => setRows(res.data))
+    }, [])
+
 
     const onSubmit = data => {
-        props.handleSubmit(data);
+      debugger
+      Object.assign(data, { id: rows.length + 1 })
+      props.handleSubmit(data);
     };
+
 
     return (
       <Dialog
@@ -29,43 +39,28 @@ const FormDialog = (props) => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <TextField
               inputRef={register({ required: true })}
-              name="id"
-              autoFocus
+              name="first_name"
               margin="dense"
-              id="id"
-              label="Id"
-              type="text"
-              fullWidth
-              defaultValue={props.selected.id}
-              disabled={!!props.selected.id}
-            />
-            {_.get('id.type', errors) === 'required' && (
-              <p className="error">This field is required</p>
-            )}
-            <TextField
-              inputRef={register({ required: true })}
-              name="name"
-              margin="dense"
-              id="name"
+              id="first_name"
               label="Name"
               type="text"
               fullWidth
               defaultValue={props.selected.first_name}
             />
-            {_.get('name.type', errors) === 'required' && (
+            {_.get('first_name.type', errors) === 'required' && (
               <p className="error">This field is required</p>
             )}
             <TextField
               inputRef={register({ required: true })}
-              name="surname"
+              name="last_name"
               margin="dense"
-              id="surname"
+              id="last_name"
               label="Surname"
               type="text"
               fullWidth
               defaultValue={props.selected.last_name}
             />
-            {_.get('surname.type', errors) === 'required' && (
+            {_.get('last_name.type', errors) === 'required' && (
               <p className="error">This field is required</p>
             )}
             <TextField
@@ -79,10 +74,14 @@ const FormDialog = (props) => {
               defaultValue={props.selected.email}
             />
             {_.get('email.type', errors) === 'required' && (
-              <p>This field is required</p>
+              <p className="error">This field is required</p>
             )}
-            <Button onClick={props.handleClose} color="primary">Cancel</Button>
-            <Button type="submit" color="primary">Submit</Button>
+            <Button onClick={props.handleClose} color="primary">
+              Cancel
+            </Button>
+            <Button type="submit" color="primary">
+              Submit
+            </Button>
           </form>
         </DialogContent>
       </Dialog>

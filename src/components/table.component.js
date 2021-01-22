@@ -26,16 +26,20 @@ export const ComponentTable = (props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            { props.rows.map((row) => (
+            {props.rows.map((row) => (
               <TableRow key={row.id}>
                 <TableCell component="th" scope="row">
-                  <Link to={`/employees/${row.id}`} >{`${row.first_name} ${row.last_name}`}</Link>
+                  <Link
+                    to={`/employees/${row.id}`}
+                  >{`${row.first_name} ${row.last_name}`}</Link>
                 </TableCell>
                 <TableCell>{row.email}</TableCell>
                 <TableCell>
-                  <EditIcon onClick={() => props.openEditModal(row)} />
+                  {/* <EditIcon onClick={() => props.openEditModal(row)} /> */}
                   <DeleteIcon onClick={() => props.onDelete(row)} />
-                  <Link to={`/employees/${row.id}`} ><VisibilityIcon/></Link>
+                  <Link to={`/employees/${row.id}`}>
+                    <VisibilityIcon />
+                  </Link>
                 </TableCell>
               </TableRow>
             ))}

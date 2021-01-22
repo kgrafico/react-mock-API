@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 
 import Button from "@material-ui/core/Button";
 
-//Local imports
 import { createEmployee, getAllEmployees, removeEmployee, updateEmployee } from "../services/employee-http.service";
 import FormDialog from "./form-dialog.component";
 import { ComponentTable } from './table.component'
@@ -46,11 +45,12 @@ const EmployeeList = () => {
     };
 
     const closeDialog = () => {
+        debugger
         setDialogOpen(false);
-        setSelected({id: '', name: '', email: ''});
+        setSelected({ id: '', first_name: '', email: '' })
     };
 
-    const edit = (data) => {
+    const edit = data => {
         data.id = selected.id;
         updateEmployee(data.id, data)
             .then(() => {

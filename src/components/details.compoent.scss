@@ -15,7 +15,11 @@
             display: flex;
             justify-content: space-around;
         }
-        .journeyworkList{
+        .journeyworkList {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             .journeyworkBox {
                 .journeyworkDetail {
                     padding: 5px 0;
