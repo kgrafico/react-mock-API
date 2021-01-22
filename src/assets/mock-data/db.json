@@ -6,7 +6,6 @@
       "last_name": "Doe",
       "email": "giovannidoe@abc.com",
       "gender": "Male",
-      "status": "Terminated",
       "journeywork": [
         {
           "id": 1,
@@ -56,7 +55,6 @@
       "last_name": "Doe",
       "email": "janedoe@abc.com",
       "gender": "Female",
-      "status": "New",
       "journeywork": [
         {
           "id": 1,
@@ -106,7 +104,6 @@
       "last_name": "Doe",
       "email": "alicedoe@abc.com",
       "gender": "Female",
-      "status": "Leaving",
       "journeywork": [
         {
           "id": 1,
@@ -156,7 +153,6 @@
       "last_name": "Doe",
       "email": "bobdoe@abc.com",
       "gender": "Male",
-      "status": "Active",
       "journeywork": [
         {
           "id": 1,

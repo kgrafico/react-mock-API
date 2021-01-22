@@ -16,7 +16,14 @@ const EmployeeList = () => {
     const [isEmployeeListManipulated, setEmployeeListManipulated] = useState(false);
     const [isDialogOpen, setDialogOpen] = useState(false);
     const [isAlertOpen, setAlertOpen] = useState(false);
-    const [selected, setSelected] = useState({ id: '', first_name: '', last_name: '', email: '' });
+    const [selected, setSelected] = useState({
+      id: '',
+      first_name: '',
+      last_name: '',
+      email: '',
+      gender: '',
+      journeywork: []
+    })
 
     useEffect(() => {
         getAllEmployees().then(res => setRows(res.data));
@@ -46,7 +53,14 @@ const EmployeeList = () => {
 
     const closeDialog = () => {
         setDialogOpen(false);
-        setSelected({ id: '', first_name: '', last_name: '', email: '' })
+        setSelected({
+          id: '',
+          first_name: '',
+          last_name: '',
+          email: '',
+          gender: '',
+          journeywork: []
+        })
     };
 
     const edit = data => {
@@ -66,7 +80,14 @@ const EmployeeList = () => {
     };
 
     const openCreateDialog = () => {
-        openFormDialog({ id: '', first_name: '', last_name: '', email: '' })
+        openFormDialog({
+          id: '',
+          first_name: '',
+          last_name: '',
+          email: '',
+          gender: '',
+          journeywork: []
+        })
     };
 
     const openEditDialog = row => {
