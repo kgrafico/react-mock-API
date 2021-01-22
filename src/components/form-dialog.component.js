@@ -10,7 +10,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-const CountryFormDialog = (props) => {
+const FormDialog = (props) => {
     const {register, handleSubmit, errors} = useForm();
 
     const onSubmit = data => {
@@ -89,4 +89,4 @@ const CountryFormDialog = (props) => {
     )
 };
 
-export default CountryFormDialog;
+export default FormDialog;

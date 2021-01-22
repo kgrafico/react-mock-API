@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 
 //Local imports
 import { createEmployee, getAllEmployees, removeEmployee, updateEmployee } from "../services/employee-http.service";
-import CountryFormDialog from "./form-dialog.component";
+import FormDialog from "./form-dialog.component";
 import { ComponentTable } from './table.component'
 import { AlertBar } from "./alert-bar.component";
 
@@ -67,14 +67,14 @@ const EmployeeList = () => {
     };
 
     const openCreateDialog = () => {
-        openCountryFormDialog({id: '', name: '', email: ''});
+        openFormDialog({id: '', name: '', email: ''});
     };
 
     const openEditDialog = (row) => {
-        openCountryFormDialog(row);
+        openFormDialog(row);
     };
 
-    const openCountryFormDialog = (row) => {
+    const openFormDialog = (row) => {
         setDialogOpen(true);
         setSelected(row);
     };
@@ -99,7 +99,7 @@ const EmployeeList = () => {
             <h2>Employees of Fast food company</h2>
             <AlertBar open={isAlertOpen} onClose={handleAlertClose} alertMeta={alertMeta}/>
             <Button className="button" variant="outlined" color="primary" onClick={openCreateDialog}>Add new</Button>
-            <CountryFormDialog open={isDialogOpen} handleClose={closeDialog} handleSubmit={handleSubmit} selected={selected}/>
+            <FormDialog open={isDialogOpen} handleClose={closeDialog} handleSubmit={handleSubmit} selected={selected}/>
             <ComponentTable rows={rows} onDelete={remove} openEditModal={openEditDialog}/>
         </div>
     );
