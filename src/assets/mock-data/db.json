@@ -44,41 +44,48 @@
       "email": "Giovannidoe@abc.com",
       "gender": "Male",
       "status": "Terminated",
-      "journeywork": {
-        "1": {
+      "journeywork": [
+        {
+          "id": 1,
           "action": "Make",
           "product": "sandwitch",
           "client": "Stavros"
         },
-        "2": {
+        {
+          "id": 2,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Stavros"
         },
-        "3": {
+        {
+          "id": 3,
           "action": "Make",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "4": {
+        {
+          "id": 4,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "5": {
+        {
+          "id": 5,
           "action": "Make",
           "product": "sandwitch",
           "client": "Adeel"
         },
-        "6": {
+        {
+          "id": 6,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "7": {
-          "action": "Take a breack"
+        {
+          "id": 7,
+          "action": "Take a break"
         }
-      }
+      ]
     },
     {
       "id": 2,
@@ -87,41 +94,48 @@
       "email": "janedoe@abc.com",
       "gender": "Female",
       "status": "New",
-      "journeywork": {
-        "1": {
+      "journeywork": [
+        {
+          "id": 1,
           "action": "Make",
           "product": "sandwitch",
           "client": "Stavros"
         },
-        "2": {
+        {
+          "id": 2,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Stavros"
         },
-        "3": {
+        {
+          "id": 3,
           "action": "Make",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "4": {
+        {
+          "id": 4,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "5": {
+        {
+          "id": 5,
           "action": "Make",
           "product": "sandwitch",
           "client": "Adeel"
         },
-        "6": {
+        {
+          "id": 6,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "7": {
+        {
+          "id": 7,
           "action": "Take a breack"
         }
-      }
+      ]
     },
     {
       "id": 3,
@@ -130,41 +144,48 @@
       "email": "alicedoe@abc.com",
       "gender": "Female",
       "status": "Leaving",
-      "journeywork": {
-        "1": {
+      "journeywork": [
+        {
+          "id": 1,
           "action": "Make",
           "product": "sandwitch",
           "client": "Stavros"
         },
-        "2": {
+        {
+          "id": 2,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Stavros"
         },
-        "3": {
+        {
+          "id": 3,
           "action": "Make",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "4": {
+        {
+          "id": 4,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "5": {
+        {
+          "id": 5,
           "action": "Make",
           "product": "sandwitch",
           "client": "Adeel"
         },
-        "6": {
+        {
+          "id": 6,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "7": {
+        {
+          "id": 7,
           "action": "Take a breack"
         }
-      }
+      ]
     },
     {
       "id": 4,
@@ -173,41 +194,48 @@
       "email": "bobdoe@abc.com",
        "gender": "Male",
       "status": "Active",
-      "journeywork": {
-        "1": {
+      "journeywork": [
+        {
+          "id": 1,
           "action": "Make",
           "product": "sandwitch",
           "client": "Stavros"
         },
-        "2": {
+        {
+          "id": 2,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Stavros"
         },
-        "3": {
+        {
+          "id": 3,
           "action": "Make",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "4": {
+        {
+          "id": 4,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "5": {
+        {
+          "id": 5,
           "action": "Make",
           "product": "sandwitch",
           "client": "Adeel"
         },
-        "6": {
+        {
+          "id": 6,
           "action": "Serve",
           "product": "sandwitch",
           "client": "Anisa"
         },
-        "7": {
+        {
+          "id": 7,
           "action": "Take a breack"
         }
-      }
+      ]
     }
   ],
   "costumers": [

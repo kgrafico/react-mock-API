@@ -14,6 +14,19 @@
         .employee-information {
             display: flex;
             justify-content: space-around;
+            .journeyworkList {
+                .journeyworkDetail {}
+            }
+        }
+        .errorMessage {
+            .show {}
+            &.hidden {
+                display: none;
+            }
         }
     }
+}
+
+.hidden {
+    display: none !important;
 }
