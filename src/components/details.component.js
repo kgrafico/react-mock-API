@@ -46,7 +46,7 @@ const EmployeeDetails = (props) => {
       })
     }
 
-    const getMinutes = (time) => {
+    const getMinutes = time => {
       const hrs = ~~(time / 3600)
       const mins = ~~((time % 3600) / 60)
       const secs = ~~time % 60

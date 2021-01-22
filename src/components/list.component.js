@@ -66,7 +66,7 @@ const EmployeeList = () => {
     };
 
     const openCreateDialog = () => {
-        openFormDialog({id: '', name: '', email: ''});
+        openFormDialog({ id: '', first_name: '', last_name: '', email: '' })
     };
 
     const openEditDialog = (row) => {
